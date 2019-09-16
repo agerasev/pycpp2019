@@ -12,11 +12,7 @@ public:
         this->x = x;
         this->y = y;
     }
-    /*
-    static CartesianVector2 from_polar(PolarVector2 p) {
-        return CartesianVector2(p.get_x(), p.get_y());
-    }
-    */
+
     double get_x() {
         return this->x;
     }
@@ -30,13 +26,6 @@ public:
     double get_phi() {
         return atan2(y, x);
     }
-
-    double length() {
-        return get_r();
-    }
-    double angle() {
-        return get_phi();
-    }
 };
 
 class PolarVector2 {
@@ -48,10 +37,6 @@ public:
     PolarVector2(double r, double phi) {
         this->r = r;
         this->phi = phi;
-    }
-
-    static PolarVector2 from_cartesian(CartesianVector2 p) {
-        return PolarVector2(p.get_r(), p.get_phi());
     }
 
     double get_x() {
@@ -67,18 +52,16 @@ public:
     double get_phi() {
         return phi;
     }
-
-    double length() {
-        return get_r();
-    }
-    double angle() {
-        return get_phi();
-    }
 };
 
 int main() {
-    PolarVector2 v = PolarVector2::from_cartesian(CartesianVector2(3, 4));
-    std::cout << v.get_x() << " " << v.get_y() << std::endl;
-    std::cout << v.length() << " " << v.angle() << std::endl;
+    CartesianVector2 cv = CartesianVector2(3, 4);
+    std::cout << cv.get_x() << " " << cv.get_y() << std::endl;
+    std::cout << cv.get_r() << " " << cv.get_phi() << std::endl;
+    
+    PolarVector2 pv = PolarVector2(1.0, M_PI/3.0);
+    std::cout << pv.get_x() << " " << pv.get_y() << std::endl;
+    std::cout << pv.get_r() << " " << pv.get_phi() << std::endl;
+
     return 0;
 }

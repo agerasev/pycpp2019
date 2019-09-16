@@ -1,6 +1,18 @@
 # Семинар 1 (05.09.19)
 
-+ [00_hello_world.cpp](https://github.com/agerasev/pycpp2019/blob/master/seminar01/00_hello_world.cpp)
-+ [01_namespaces.cpp](https://github.com/agerasev/pycpp2019/blob/master/seminar01/01_namespaces.cpp)
-+ [02_vectors.cpp](https://github.com/agerasev/pycpp2019/blob/master/seminar01/02_vectors.cpp)
-+ [03_vectors_separate.cpp](https://github.com/agerasev/pycpp2019/blob/master/seminar01/03_vectors_separate.cpp)
+## `00_hello_world.cpp`
+
+Первая программа на языке C++, которая выводит "Hello, World!" в терминал.
+
+## `01_namespaces.cpp`
+
+Использование `std` пространства имён, создание своего пространства имён.
+
+## `02_vectors.cpp`
+
+Два класса двумерных векторов, которые имеют одинаковый интерфейс, но разное внутреннее представление.
+
+## `03_vectors_separate/*`
+
+Те же векторы, что и в предыдущем примере, только разбитые на объявление классов `vectors.hh` и определение их методов `vectors.cpp`.
+Такая практика широко используется в языках C/C++. В частности, это позволяет классам работать с объектами друг друга.

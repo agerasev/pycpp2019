@@ -45,11 +45,14 @@ public:
     Polygon(int n) {
         this->vertex_count = n;
         this->vertices = new Point[n];
-        cout << "ctor" << endl;
+    }
+    Polygon(const Polygon &other) : Polygon(other.vertex_count) {
+        for (int i = 0; i < other.vertex_count; ++i) {
+            this->vertices[i] = other.vertices[i];
+        }
     }
     virtual ~Polygon() {
         delete[] this->vertices;
-        cout << "dtor" << endl;
     }
 
     Polygon &operator=(Polygon &other) {
